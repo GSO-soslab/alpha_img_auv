@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>alpha_img_auv</name>
+  <version>0.0.0</version>
+  <description>The alpha_img_auv package</description>
+
+  <maintainer email="linzhao@uri.edu">Lin Zhao</maintainer>
+  <author email="mzhou@uri.edu">Mingxi Zhou</author>
+  <author email="emircem@uri.edu">Emir Cem Gezer</author>
+  <author email="linzhao@uri.edu">Lin Zhao</author>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+
+  </export>
+</package>
