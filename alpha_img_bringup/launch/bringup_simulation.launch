@@ -15,7 +15,8 @@
     <!--
         List of the simulated worlds in the 'world_of_stonefish'
     -->
-    <arg name="scenario" default="ocean_img"/>
+    <!-- <arg name="scenario" default="ocean_img"/> -->
+    <arg name="scenario" default="tank_img"/>
 
     <include file="$(find world_of_stonefish)/launch/simulation.launch">
         <arg name="robot_name" value="$(arg robot_name)"/>
