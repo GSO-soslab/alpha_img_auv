@@ -21,7 +21,7 @@ PWM_Control:
     channel: 1
     mode: thruster
     topic: control/thruster/heave_stern
-  # horizaontal-front
+  # horizaontal-back
   sway_bow:
     channel: 2
     mode: thruster

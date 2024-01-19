@@ -9,7 +9,7 @@ Panels:
         - /Odometry1/Covariance1
         - /Image_FLS1
       Splitter Ratio: 0.5082568526268005
-    Tree Height: 448
+    Tree Height: 834
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -122,6 +122,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        oculus:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         ping360_link:
           Alpha: 1
           Show Axes: false
@@ -154,37 +158,39 @@ Visualization Manager:
         alpha_img/base_link:
           Value: true
         alpha_img/cg_link:
-          Value: true
+          Value: false
         alpha_img/dvl:
-          Value: true
+          Value: false
         alpha_img/dvl_sf:
-          Value: true
+          Value: false
         alpha_img/gps:
-          Value: true
+          Value: false
         alpha_img/heave_bow_thruster_link:
-          Value: true
+          Value: false
         alpha_img/heave_stern_thruster_link:
-          Value: true
+          Value: false
         alpha_img/imu:
-          Value: true
+          Value: false
         alpha_img/imu_sf:
-          Value: true
+          Value: false
         alpha_img/nose_tip_link:
-          Value: true
+          Value: false
+        alpha_img/oculus:
+          Value: false
         alpha_img/odom:
-          Value: true
+          Value: false
         alpha_img/ping360_link:
-          Value: true
+          Value: false
         alpha_img/pressure:
-          Value: true
+          Value: false
         alpha_img/surge_thruster_link:
-          Value: true
+          Value: false
         alpha_img/sway_bow_thruster_link:
-          Value: true
+          Value: false
         alpha_img/world:
-          Value: true
+          Value: false
         alpha_img/world_ned:
-          Value: true
+          Value: false
       Marker Alpha: 1
       Marker Scale: 0.5
       Name: TF
@@ -196,50 +202,52 @@ Visualization Manager:
           alpha_img/base_link:
             alpha_img/cg_link:
               {}
-            alpha_img/dvl:
-              {}
-            alpha_img/dvl_sf:
-              {}
-            alpha_img/gps:
-              {}
-            alpha_img/heave_bow_thruster_link:
-              {}
-            alpha_img/heave_stern_thruster_link:
-              {}
-            alpha_img/imu:
+            alpha_img/nose_tip_link:
+              alpha_img/dvl:
+                {}
+              alpha_img/dvl_sf:
+                {}
+              alpha_img/gps:
+                {}
+              alpha_img/heave_bow_thruster_link:
+                {}
+              alpha_img/heave_stern_thruster_link:
+                {}
+              alpha_img/imu:
+                {}
               alpha_img/imu_sf:
                 {}
-            alpha_img/nose_tip_link:
-              {}
-            alpha_img/ping360_link:
-              {}
-            alpha_img/pressure:
-              {}
-            alpha_img/surge_thruster_link:
-              {}
-            alpha_img/sway_bow_thruster_link:
-              {}
+              alpha_img/oculus:
+                {}
+              alpha_img/ping360_link:
+                {}
+              alpha_img/pressure:
+                {}
+              alpha_img/surge_thruster_link:
+                {}
+              alpha_img/sway_bow_thruster_link:
+                {}
           alpha_img/world:
             alpha_img/world_ned:
               {}
       Update Interval: 0
       Value: true
     - Class: rviz/Marker
-      Enabled: false
-      Marker Topic: /alpha_img/helm/path_global/path
+      Enabled: true
+      Marker Topic: /alpha_img/helm/path_3d/path
       Name: Planed_Path
       Namespaces:
-        {}
+        "": true
       Queue Size: 100
-      Value: false
+      Value: true
     - Class: rviz/Marker
-      Enabled: false
-      Marker Topic: /alpha_img/helm/path_global/segment
+      Enabled: true
+      Marker Topic: /alpha_img/helm/path_3d/segment
       Name: Followed_Path
       Namespaces:
-        {}
+        "": true
       Queue Size: 100
-      Value: false
+      Value: true
     - Angle Tolerance: 0.10000000149011612
       Class: rviz/Odometry
       Covariance:
@@ -258,7 +266,7 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Keep: 5
+      Keep: 100
       Name: Odometry
       Position Tolerance: 0.10000000149011612
       Queue Size: 10
@@ -276,7 +284,7 @@ Visualization Manager:
       Unreliable: false
       Value: true
     - Class: rviz/Image
-      Enabled: true
+      Enabled: false
       Image Topic: /alpha_img/FLS/data/display
       Max Value: 1
       Median window: 5
@@ -286,7 +294,7 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236
@@ -315,7 +323,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.253115653991699
+      Distance: 45.90304946899414
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -323,27 +331,27 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -9.43254566192627
-        Y: 8.428035736083984
-        Z: 5.323205947875977
+        X: 3.231022357940674
+        Y: 22.67595863342285
+        Z: -6.021010875701904
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4147976040840149
+      Pitch: 0.5747987627983093
       Target Frame: alpha/base_link
-      Yaw: 2.690427303314209
+      Yaw: 2.8154354095458984
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1043
+  Height: 1016
   Hide Left Dock: false
   Hide Right Dock: true
   Image_FLS:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000020a000003e0fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000001600000243000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000120049006d006100670065005f0046004c0053010000025f000001970000001600ffffff0000000100000100000003e0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000016000003e0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f30000003efc0100000002fb0000000800540069006d00650000000000000004f30000041800fffffffb0000000800540069006d0065010000000000000450000000000000000000000570000003e000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000020a000003c5fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000016000003c5000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000120049006d006100670065005f0046004c0053000000024f0000018c0000001600ffffff0000000100000100000003e0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000016000003e0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f30000003efc0100000002fb0000000800540069006d00650000000000000004f30000041800fffffffb0000000800540069006d0065010000000000000450000000000000000000000570000003c500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -354,4 +362,4 @@ Window Geometry:
     collapsed: true
   Width: 1920
   X: 0
-  Y: 0
+  Y: 27

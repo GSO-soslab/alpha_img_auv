@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of ALPHA AUV project.
+
+    Author: Lin Zhao
+    Email: linzhao@uri.edu
+    Year: 2024
+
+    Copyright (C) 2022-2024 Smart Ocean Systems Laboratory
+-->
+
+<launch>
+
+  <arg name="robot_name" default="changeme"/>
+  <arg name="manager" default="/$(arg robot_name)/nodelet_manager" />
+
+
+  <group ns="$(arg robot_name)">
+
+    <node pkg="nodelet" type="nodelet" name="nodelet_manager"  
+          args="manager" output="screen"/>
+
+    <node pkg="nodelet" type="nodelet" name="oculus_sonar_driver"
+          args="load blueprint_oculus/driver $(arg manager)" output="screen">
+      <rosparam command="load" file="$(find alpha_img_config)/config/blueprint_oculus_fls.yaml"/>
+    </node>
+
+  </group>
+
+</launch>

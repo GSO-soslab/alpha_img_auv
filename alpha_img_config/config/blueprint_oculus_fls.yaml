@@ -1,0 +1,24 @@
+# Note: 
+range: 2
+
+# Note:
+gain_percent: 100
+
+# Note:
+gamma: 127
+
+# Note: Normal:0, High:1, Highest:2, Low:3, Lowest:4, Standby:5
+ping_rate: 0
+
+# Note:
+freq_mode: 2
+
+# Note: serial# 12415
+# Default: 192.168.2.113  
+ip_address: "auto"
+
+# Note:
+send_gain: true
+
+# Note: 
+frame_id: "oculus"
