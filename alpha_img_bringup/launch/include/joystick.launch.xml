@@ -25,9 +25,9 @@
   <!-- This can be used in simulation -->
   <!-- !!!!NEVER RUN LAUNCH THE FOLLOWING NODE on the computers inside  the vehicle -->
   
-  <!-- <node ns="$(arg robot_name)" name="joy_node" pkg="joy" 
+  <node ns="$(arg robot_name)" name="joy_node" pkg="joy" 
         type="joy_node" output="screen">
         <remap from="joy" to="helm/direct_control/joy" />
-  </node> -->
+  </node>
 
 </launch>

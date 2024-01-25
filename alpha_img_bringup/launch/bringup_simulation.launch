@@ -11,12 +11,14 @@
 <launch>
 
     <arg name="robot_name" default="alpha_img"/>
+    <arg name="delay" default="25.0" />
 
     <!--
         List of the simulated worlds in the 'world_of_stonefish'
     -->
-    <arg name="scenario" default="ocean_img"/>
+    <!-- <arg name="scenario" default="ocean_img"/> -->
     <!-- <arg name="scenario" default="tank_img"/> -->
+    <arg name="scenario" default="flat_terrain"/>
 
     <include file="$(find world_of_stonefish)/launch/simulation.launch">
         <arg name="robot_name" value="$(arg robot_name)"/>
@@ -45,6 +47,12 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
     
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find alpha_img_description)/rviz/config.rviz"/>
+    <node pkg="rviz" type="rviz" name="rviz" 
+          args="-d $(find alpha_img_description)/rviz/config.rviz"
+          launch-prefix="bash -c 'sleep $(arg delay); $0 $@'" />
+
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" 
+          args="--perspective-file $(find alpha_img_description)/rqt/default.perspective"
+          launch-prefix="bash -c 'sleep $(arg delay); $0 $@'" />
 
 </launch>
