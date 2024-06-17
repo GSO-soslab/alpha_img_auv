@@ -12,8 +12,8 @@
 
   <arg name="robot_name" default="alpha_img"/>
 
-  <include file="$(find alpha_img_bringup)/launch/include/gps_gpsd.launch.xml">
+  <include file="$(find alpha_img_bringup)/launch/include/gpio_manager.launch.xml">
     <arg name="robot_name" value="$(arg robot_name)"/>
-  </include>
+  </include> 
 
 </launch>

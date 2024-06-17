@@ -52,10 +52,15 @@
     <arg name="robot_name" value="$(arg robot_name)"/>
   </include>
 
-  <!-- Bring up GPS -->
+  <!-- Bring up GPS using NMEA driver-->
   <!-- <include file="$(find alpha_img_bringup)/launch/include/gps_nmea.launch.xml">
     <arg name="robot_name" value="$(arg robot_name)"/>
   </include> -->
+
+  <!-- Bring up GPS using GPSD driver-->
+  <include file="$(find alpha_img_bringup)/launch/include/gps_gpsd.launch.xml">
+    <arg name="robot_name" value="$(arg robot_name)"/>
+  </include>
 
   <!-- Bring up the ROS TF -->
   <include file="$(find alpha_img_bringup)/launch/include/description.launch.xml">

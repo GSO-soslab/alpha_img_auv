@@ -25,7 +25,7 @@ PWM_Control:
   sway_bow:
     channel: 2
     mode: thruster
-    topic: control/thruster/sway_bow
+    topic: control/thruster/sway_stern
   # main
   surge:
     channel: 0

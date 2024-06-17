@@ -54,25 +54,25 @@ control_modes:
 ##
 thruster_ids:
   - surge
-  - sway_bow
+  - sway_stern
   - heave_bow
   - heave_stern
 
 control_tf:
   surge: surge_thruster_link
-  sway_bow: sway_bow_thruster_link
+  sway_stern: sway_stern_thruster_link
   heave_bow: heave_bow_thruster_link
   heave_stern: heave_stern_thruster_link
 
 thruster_command_topics:
   surge: control/thruster/surge
-  sway_bow: control/thruster/sway_bow
+  sway_stern: control/thruster/sway_stern
   heave_bow: control/thruster/heave_bow
   heave_stern: control/thruster/heave_stern
 
 thruster_force_topics:
   surge: control/force/surge
-  sway_bow: control/force/sway_bow
+  sway_stern: control/force/sway_stern
   heave_bow: control/force/heave_bow
   heave_stern: control/force/heave_stern
 
@@ -118,7 +118,7 @@ thruster_polynomials:
   # heave_bow:    [0.06165, 20.32, 9.632, 93.05, -2.856, -74.1]
   # heave_stern:  [0.06165, 20.32, 9.632, 93.05, -2.856, -74.1]
   surge:        [0.3281, 44.1281, 22.8029, 84.2361, -6.5710, -41.5185]
-  sway_bow:     [0.0305, 18.9527, 6.1205, 64.0375, 2.4386, -24.8871]
+  sway_stern:     [0.0305, 18.9527, 6.1205, 64.0375, 2.4386, -24.8871]
   heave_bow:    [0.0305, 18.9527, 6.1205, 64.0375, 2.4386, -24.8871]
   heave_stern:  [0.0305, 18.9527, 6.1205, 64.0375, 2.4386, -24.8871]
   
@@ -128,7 +128,7 @@ thruster_limits:
   surge:
     max: 20
     min: -20
-  sway_bow:
+  sway_stern:
     max: 25
     min: -25
   heave_bow:
