@@ -34,7 +34,7 @@ Configuration:
 
   # Note: Sonar max range [m], from 1 to 50
   # Default: 2
-  range: 10
+  range: 20
 
   # Note: Sonar angular resolution [degrees], from 1 to 20.
   # Default: 1
@@ -56,7 +56,7 @@ Sector:
     angle_sector: 360
 
   custom_mode:
-    enabled: true
+    enabled: false
     angle_min: 0
     angle_max: 270
     # The transducer reads from 0->angle_max->angle_min.
@@ -75,7 +75,7 @@ Driver:
 
   # Note: Publish images on Sensors_msgs/Image
   # Default: true
-  image_publish: false
+  image_publish: true
 
   # Note: Output image size [pixels], from 100 to 1000
   # Default: 300

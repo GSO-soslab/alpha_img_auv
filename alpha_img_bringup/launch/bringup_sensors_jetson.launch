@@ -3,12 +3,12 @@
 
   <!-- Bring up the Blueprint Oculus FLS sensor -->
   <include file="$(find alpha_img_bringup)/launch/include/blueprint_oculus_fls.launch.xml">
-    <arg name="robot_name" value="$(arg robot_name)"/>
+    <arg name="robot_name" value="$(arg robot_name)/fls"/>
   </include>  
 
   <!-- Bring up the Bluerobotics Ping360 MSIS sensor -->
   <include file="$(find alpha_img_bringup)/launch/include/bluerobotics_ping360.launch.xml">
-    <arg name="robot_name" value="$(arg robot_name)"/>
+    <arg name="robot_name" value="$(arg robot_name)/msis"/>
   </include>  
 
   <!-- Bring up the DWE stellarHD fisheye camera sensor -->
