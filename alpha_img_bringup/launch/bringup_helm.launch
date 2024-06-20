@@ -39,9 +39,8 @@
         <!-- Load direct control related param -->
         <!-- TODO: have to change vehilce manually for direct control frames  -->
         <rosparam command="load" ns="direct_control" file="$(find alpha_img_config)/mission/param/direct_control.yaml"/>
+        <rosparam command="load" ns="teleop" file="$(find alpha_img_config)/mission/param/teleop.yaml"/>
 
-        <!-- Load timer related param -->
-        <!-- <rosparam command="load" ns="timer" file="$(find alpha_img_config)/mission/param/timer.yaml"/> -->
     </node>
 
 </launch>

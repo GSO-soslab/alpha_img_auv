@@ -12,7 +12,7 @@
         <param name="factor_joy3" value="0.2" type="double" />
 
         <!-- main -->
-        <remap from="joy_axes0" to="control/thruster/sway_bow" />
+        <remap from="joy_axes0" to="control/thruster/sway_stern" />
         <!-- H -->
         <remap from="joy_axes1" to="control/thruster/surge" />
         <!-- V-Front -->

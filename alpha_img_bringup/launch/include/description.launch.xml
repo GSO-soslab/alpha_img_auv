@@ -10,7 +10,7 @@
 -->
 <launch>
 
-  <arg name="robot_name" default="alpha_rise"/>
+  <arg name="robot_name" default="alpha_img"/>
 
   <include file="$(find alpha_img_description)/launch/description.launch">
     <arg name="robot_name" value="$(arg robot_name)"/>

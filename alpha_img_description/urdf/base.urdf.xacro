@@ -14,7 +14,7 @@
     
     <link name="base_link"/>
     <joint name="base_link" type="fixed">
-        <origin xyz="0.70 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.825 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="nose_tip_link"/>
     </joint>
@@ -28,7 +28,7 @@
 
     <link name="imu"/>
     <joint name="imu_joint" type="fixed">
-        <origin xyz="-0.6867 -0.0625 -0.0381" rpy="3.1415926 0.0 0.0"/>
+        <origin xyz="-0.8117 -0.0625 -0.0381" rpy="3.1415926 0.0 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="imu"/>
     </joint>
@@ -42,7 +42,7 @@
 
     <link name="dvl"/>
     <joint name="dvl_joint" type="fixed">
-        <origin xyz="-1.005 0.0 -0.1" rpy="3.1415926 0.0 0.0"/>
+        <origin xyz="-1.13 0.0 -0.14" rpy="3.1415926 0.0 3.1415926"/>
         <parent link="nose_tip_link"/>
         <child link="dvl"/>
     </joint>
@@ -56,28 +56,28 @@
 
     <link name="gps"/>
     <joint name="gps_joint" type="fixed">
-        <origin xyz="-0.7 0.0 0.3" rpy="3.1415926 0.0 0.0"/>
+        <origin xyz="-0.51 0.0 0.395" rpy="3.1415926 0.0 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="gps"/>
     </joint>
 
     <link name="pressure"/>
     <joint name="pressure_joint" type="fixed">
-        <origin xyz="-0.4073 -0.0625 0.0" rpy="3.1415926 0.0 0.0"/>
+        <origin xyz="-0.508 -0.0625 0.0" rpy="3.1415926 0.0 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="pressure"/>
     </joint>
 
     <link name="ping360_link"/>
     <joint name="ping360_joint" type="fixed">
-        <origin xyz="-0.01 0.12192 0.0" rpy="-1.57079632679 0.0 3.1415926"/>
+        <origin xyz="-0.1 0.12192 0.0" rpy="-1.57079632679 0.0 3.1415926"/>
         <parent link="nose_tip_link"/>
         <child link="ping360_link"/>
     </joint>
 
     <link name="oculus"/>
     <joint name="fls_joint" type="fixed">
-        <origin xyz="0.0 -0.04 -0.09" rpy="3.1415926 0.436332306 0.0"/>
+        <origin xyz="0.0 -0.04 -0.09" rpy="3.1415926 0.261799383 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="oculus"/>
     </joint>
@@ -85,32 +85,31 @@
     <!-- thrusters -->
     <link name="surge_thruster_link"/>
     <joint name="surge_thruster_joint" type="fixed">
-        <origin xyz="-1.4 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="-1.525 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="surge_thruster_link"/>
     </joint>
 
     <link name="heave_bow_thruster_link"/>
     <joint name="heave_bow_thruster_joint" type="fixed">
-        <origin xyz="-0.2295 0.0 0.0" rpy="0.0 -1.57079632679 0.0"/>
+        <origin xyz="-0.3545 0.0 0.0" rpy="0.0 -1.57079632679 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="heave_bow_thruster_link"/>
     </joint>
 
     <link name="heave_stern_thruster_link"/>
     <joint name="heave_stern_thruster_joint" type="fixed">
-        <origin xyz="-0.88 0.0 0.0" rpy="0.0 -1.57079632679 0.0"/>
+        <origin xyz="-1.005 0.0 0.0" rpy="0.0 -1.57079632679 0.0"/>
         <parent link="nose_tip_link"/>
         <child link="heave_stern_thruster_link"/>
     </joint>
 
-    <link name="sway_bow_thruster_link"/>
-    <joint name="sway_bow_thruster_joint" type="fixed">
-        <origin xyz="-1.005 0.0 0.0" rpy="0.0 0.0 1.57079632679"/>
+    <link name="sway_stern_thruster_link"/>
+    <joint name="sway_stern_thruster_joint" type="fixed">
+        <origin xyz="-1.130 0.0 0.0" rpy="0.0 0.0 1.57079632679"/>
         <parent link="nose_tip_link"/>
-        <child link="sway_bow_thruster_link"/>
+        <child link="sway_stern_thruster_link"/>
     </joint>
-
 
    
 </robot>
