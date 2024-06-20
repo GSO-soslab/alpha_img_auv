@@ -3,16 +3,20 @@
 ##  - port + baudrate information
 ##  - nothing: the driver scans for devices and selects the first found.
 # device_id: '077007EF' # uppercase hex string
-port: '/dev/ttyS0'
-baudrate: 115200 # non necessary for some devices
-
+# port: '/dev/ttyUSB0'
+# baudrate: 921600 # non necessary for some devices
 ## Log file (optional), placed in ~/.ros/ otherwise use absolute path
 # log_file: log.mtb
 
+port: '/dev/ttyS0'
+baudrate: 115200 # non necessary for some devices
+
 publisher_queue_size: 5
+gps_fix_topic: "/alpha_img/gps/fix"
+set_lla_with_gps_fix: true
 
 # TF transform frame_id (default: imu_link), you may want to change it if you use multiple devices
-
+#frame_id: "imu_link"
 # Message publishers
 pub_imu: true
 pub_quaternion: true
@@ -32,13 +36,18 @@ pub_positionLLA: false
 pub_velocity: false
 pub_euler: true
 
+pub_raw_mag: false
+pub_raw_gyro: false
+pub_raw_accel: false
+
 quaternion_freq: 100
 magnetic_field_freq: 100
 acceleration_freq: 100
 rate_of_turn_freq: 100
 euler_angles_freq: 100
+inrun_compass_calibration: true
 
-
+# raw_data_freq: 100
 ## Sensor standard deviation [x,y,z] (optional)
 ## This value is used to override the covariance matrix in sensor_msgs/Imu and
 ## sensor_msgs/MagneticField messages.
