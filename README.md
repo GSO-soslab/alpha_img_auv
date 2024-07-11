@@ -93,10 +93,15 @@ cd mvp_core
 git submodule update <specific path to submodule>
 ```
 
-- Install required submodules for ALPHA IMG AUV
+- Install required submodules of Pi for ALPHA IMG AUV
 ```sh
 cd mvp_core/external
-git submodule update --init ROS_MSCL power_monitor waterlinked_dvl bluerobotics_pressure uno_lqe xsens_mti_ros_driver
+git submodule update --init --recursive ROS_MSCL power_monitor waterlinked_dvl bluerobotics_pressure uno_lqe xsens_mti_ros_driver
+```
+- Install required submodules of Jetson for ALPHA IMG AUV
+```sh
+cd mvp_core/external
+git submodule update --init --recursive bluerobotics_ping360 blueprint_oculus_sonar
 ```
 
 Install dependencies for required ROS packages
