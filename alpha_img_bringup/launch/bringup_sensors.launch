@@ -12,7 +12,17 @@
     </include>
 
     <!-- Bring up Xsens AHRS -->
-    <include file="$(find alpha_img_bringup)/launch/include/xsens_imu.launch.xml">
+    <!-- <include file="$(find alpha_img_bringup)/launch/include/xsens_imu.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include>  -->
+
+    <!-- Bring up the microstrain ahrs  -->
+    <include file="$(find alpha_img_bringup)/launch/include/microstrain.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include> 
+
+    <!-- Bring up madgwick filter-->
+    <include file="$(find alpha_img_bringup)/launch/include/madgwick_filter.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include> 
 

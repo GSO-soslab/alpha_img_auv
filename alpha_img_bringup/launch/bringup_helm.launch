@@ -25,20 +25,20 @@
         -->
 
         <!-- Load periodic surfacing related param -->
-        <rosparam command="load" ns="periodic_surfacing" file="$(find alpha_img_config)/mission/param/periodic_surfacing.yaml"/>
+        <!-- <rosparam command="load" ns="periodic_surfacing" file="$(find alpha_img_config)/mission/param/periodic_surfacing.yaml"/> -->
 
         <!-- Load path following related param -->
         <rosparam command="load" ns="path_3d" file="$(find alpha_img_config)/mission/param/path_3d.yaml"/>
-        <!-- Note: waypoint frame id should keep in world-->
+        <!--    Note: waypoint frame id should keep in world-->
         <param name="path_3d/frame_id" value="$(arg robot_name)/world"/>
         <param name="path_3d/enu_frame" value="$(arg robot_name)/world"/>
         <param name="path_3d/waypoint_path" value="$(find alpha_img_config)/mission/param/go_to_list/"/>
-        <!-- Note: robot localization local to lat lon service name  -->
+        <!--    Note: robot localization local to lat lon service name  -->
         <param name="path_3d/toll_service" value="/$(arg robot_name)/toLL"/>
 
         <!-- Load direct control related param -->
-        <!-- TODO: have to change vehilce manually for direct control frames  -->
-        <rosparam command="load" ns="direct_control" file="$(find alpha_img_config)/mission/param/direct_control.yaml"/>
+        <!--    TODO: have to change vehilce manually for direct control frames  -->
+        <!-- <rosparam command="load" ns="direct_control" file="$(find alpha_img_config)/mission/param/direct_control.yaml"/> -->
         <rosparam command="load" ns="teleop" file="$(find alpha_img_config)/mission/param/teleop.yaml"/>
 
     </node>

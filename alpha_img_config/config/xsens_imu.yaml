@@ -13,7 +13,7 @@ baudrate: 115200 # non necessary for some devices
 
 publisher_queue_size: 5
 gps_fix_topic: "/alpha_img/gps/fix"
-set_lla_with_gps_fix: true
+set_lla_with_gps_fix: false
 
 # TF transform frame_id (default: imu_link), you may want to change it if you use multiple devices
 #frame_id: "imu_link"

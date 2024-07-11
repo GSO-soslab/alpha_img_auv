@@ -213,7 +213,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        sway_bow_thruster_link:
+        sway_stern_thruster_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -260,7 +260,7 @@ Visualization Manager:
           Value: false
         alpha_img/surge_thruster_link:
           Value: false
-        alpha_img/sway_bow_thruster_link:
+        alpha_img/sway_stern_thruster_link:
           Value: false
         alpha_img/world:
           Value: false
@@ -300,7 +300,7 @@ Visualization Manager:
                 {}
               alpha_img/surge_thruster_link:
                 {}
-              alpha_img/sway_bow_thruster_link:
+              alpha_img/sway_stern_thruster_link:
                 {}
           alpha_img/world:
             alpha_img/world_ned:
