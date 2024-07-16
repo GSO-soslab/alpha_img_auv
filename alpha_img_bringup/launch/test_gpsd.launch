@@ -10,15 +10,15 @@
 -->
 <launch>
 
-    <arg name="robot_name" default="alpha_rise"/>
+    <arg name="robot_name" default="alpha_img"/>
     
     <!-- gpsd driver -->
-    <include file="$(find alpha_rise_bringup)/launch/include/gps_gpsd.launch.xml">
+    <include file="$(find alpha_img_bringup)/launch/include/gps_gpsd.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
     <!-- nmea driver -->
-    <!-- <include file="$(find alpha_rise_bringup)/launch/include/gps_nmea.launch.xml">
+    <!-- <include file="$(find alpha_img_bringup)/launch/include/gps_nmea.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include> -->
 

@@ -22,11 +22,11 @@
     </include> 
 
     <!-- Bring up madgwick filter-->
-    <include file="$(find alpha_img_bringup)/launch/include/madgwick_filter.launch.xml">
+    <!-- <include file="$(find alpha_img_bringup)/launch/include/madgwick_filter.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include> 
+    </include>  -->
 
-    <!-- Bring up GPS -->
+    <!-- Bring up GPS --> 
     <include file="$(find alpha_img_bringup)/launch/include/gps_gpsd.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>

@@ -12,8 +12,8 @@
 
   <arg name="robot_name" default="alpha_img"/>
 
-  <include file="$(find alpha_img_bringup)/launch/include/gps_gpsd.launch.xml">
-    <arg name="robot_name" value="$(arg robot_name)"/>
-  </include>
+  <include file="$(find alpha_img_bringup)/launch/include/microstrain.launch.xml">
+      <arg name="robot_name" value="$(arg robot_name)"/>
+  </include> 
 
 </launch>

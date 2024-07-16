@@ -1,5 +1,5 @@
 Serial:
-  port: /dev/ttyACM0
+  port: /dev/ttyACM1
   baud: 115200
   parity: 0
   databits: 8
