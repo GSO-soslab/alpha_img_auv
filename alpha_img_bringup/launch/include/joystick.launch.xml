@@ -23,7 +23,7 @@
   
   <node ns="$(arg robot_name)" name="joy_node" pkg="joy" 
         type="joy_node" output="screen">
-        <remap from="joy" to="helm/direct_control/joy" />
+        <remap from="joy" to="helm/teleop/joy" />
   </node>
 
 </launch>

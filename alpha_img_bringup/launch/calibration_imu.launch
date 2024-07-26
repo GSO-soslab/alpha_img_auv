@@ -12,7 +12,7 @@
     </include> 
 
     <!-- magnetometer calibration -->
-    <!-- <node ns="$(arg robot_name)" pkg="calib_magnetometer" type="calibrate_imu.py" 
+    <node ns="$(arg robot_name)" pkg="calib_magnetometer" type="calibrate_imu.py" 
           name="mag_calibrator" output="screen">
 
       <param name="publish_calibrated" value="False" />
@@ -22,19 +22,19 @@
       <param name="calibrations_dir" value="$(find calib_magnetometer)/result" />
       <remap from="/magnetometer" to="imu/mag"/>
 
-    </node> -->
-
-    <!-- gyro calibrtion  -->
-    <node ns="$(arg robot_name)" pkg="calib_gyro" type="calibrate_gyro.py" name="gyro_calibrator" output="screen">
-      <remap from="imu/data" to="imu/data_raw"/>
     </node>
 
+    <!-- gyro calibrtion  -->
+    <!-- node ns="$(arg robot_name)" pkg="calib_gyro" type="calibrate_gyro.py" name="gyro_calibrator" output="screen">
+      <remap from="imu/data" to="imu/data_raw"/>
+    </node -->
+
     <!-- accelerometer calibrtion  -->
-    <node ns="$(arg robot_name)" pkg="calib_accelerometer" type="calib_accel" name="accl_calibrator" output="screen">
+    <!-- node ns="$(arg robot_name)" pkg="calib_accelerometer" type="calib_accel" name="accl_calibrator" output="screen">
       <remap from="/imu_input" to="imu/data_raw"/>
       <param name="max_samples" value="600" />
       <param name="log" value="false" />
-    </node>
+    </node -->
 
 
     <!-- visualization: opengl 4.0 issue, use opengl 3.0 instead -->

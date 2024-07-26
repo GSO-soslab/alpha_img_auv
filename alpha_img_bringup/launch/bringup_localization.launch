@@ -22,7 +22,6 @@
     <!-- Bring up the Localization Solution -->
     <include file="$(find alpha_img_bringup)/launch/include/localization.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-        <!-- <arg name="is_sim" default="$(arg is_sim)"/> -->
     </include>
 
 </launch>

@@ -4,13 +4,14 @@
     <arg name="robot_name" default="alpha_img"/>
 
     <node ns="$(arg robot_name)" pkg="imu_filter_madgwick" type="imu_filter_node" 
-          name="imu_filter_node" output="screen">
+          name="madgwick_filter_node" output="screen">
           
         <param name = "world_frame" value="enu"/>
         <param name = "gain" value = "0.4"/>
-        <!-- <param name = "mag_bias_x" value="-0.28812"/> -->
-        <!-- <param name = "mag_bias_y" value="-0.0252"/> -->
-        <!-- <param name = "mag_bias_z" value="0.42527816"/> -->
+        <param name = "mag_bias_x" value="0.0194"/>
+        <param name = "mag_bias_y" value="-0.0547"/>
+        <param name = "mag_bias_z" value="-0.0847"/> 
+        <!-- <param name = "soft_iron_matrix" value=""/>  -->
         <param name = "gyro_bias_x" value="-0.002047483082430453"/>
         <param name = "gyro_bias_y" value="-0.0011376166483670807"/>
         <param name = "gyro_bias_z" value="5.829118179724444e-05"/>
