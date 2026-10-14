@@ -1,7 +1,7 @@
 # ALPHA IMG AUV
 
 ## Introduction
-This is the configuration for our ALPHA IMG AUV, the imaging-sonar vehicle of the ALPHA family. It carries the Blueprint Oculus forward-looking sonar, the Blue Robotics Ping360 mechanically scanned sonar, a fisheye camera and, in the near future, a Cerulean Omniscan 3D. For the ROS 1 (Noetic) configuration, see the `noetic_devel` branch.
+This is the configuration for our ALPHA IMG AUV, the imaging-sonar vehicle of the ALPHA family. It carries the Blueprint Oculus forward-looking sonar, the Blue Robotics Ping360 mechanically scanned sonar, a fisheye camera and, planned, a Cerulean Omniscan sonar. For the ROS 1 (Noetic) configuration, see the `noetic_devel` branch.
 - ROS2 version Jazzy,
 - Ubuntu 24.04
 
