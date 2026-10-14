@@ -1,0 +1,16 @@
+/alpha_img/waterlinked_dvl:
+  ros__parameters:
+    ip: 192.168.2.101
+    port: 16171
+    frame_id: alpha_img/dvl
+    velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    position_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    speed_of_sound: 1500
+    mounting_rotation_offset: 0
+    acoustics_enabled: true
+    range_mode: "auto"
+    periodic_cycling_enabled: true
+    # 0 - Time I/O: use the ROS time when data arrived at the computer
+    # 1 - Time of validity: timestamp of the surface reflection (center of ping)
+    # 2 - Time of transmission: timestamp from just before the TCP report is sent
+    time_type: 0

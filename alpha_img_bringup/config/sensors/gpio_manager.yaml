@@ -1,0 +1,5 @@
+/alpha_img/gpio_manager_node:
+  ros__parameters:
+    gpio_devices: [payload_24v, payload_regular, jetson]
+    # WiringPi GPIO numbers
+    wiringpi_gpio: [12, 13, 11]

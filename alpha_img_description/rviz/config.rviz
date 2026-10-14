@@ -1,229 +1,58 @@
 Panels:
-  - Class: rviz/Displays
-    Help Height: 0
+  - Class: rviz_common/Displays
+    Help Height: 78
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Grid_11/Offset1
-        - /Grid_21/Offset1
-        - /Grid_31/Offset1
-        - /Grid_41/Offset1
-        - /TF1/Frames1
-        - /Odometry1/Covariance1
-        - /IMG_MSIS1
-      Splitter Ratio: 0.5082568526268005
-    Tree Height: 465
-  - Class: rviz/Selection
+        - /Global Options1
+        - /Status1
+        - /TF1
+        - /PointCloud21
+        - /Path1
+        - /Marker1
+        - /Marker2
+      Splitter Ratio: 0.5
+    Tree Height: 542
+  - Class: rviz_common/Selection
     Name: Selection
-  - Class: rviz/Tool Properties
+  - Class: rviz_common/Tool Properties
     Expanded:
-      - /2D Pose Estimate1
-      - /2D Nav Goal1
+      - /2D Goal Pose1
       - /Publish Point1
     Name: Tool Properties
     Splitter Ratio: 0.5886790156364441
-  - Class: rviz/Views
+  - Class: rviz_common/Views
     Expanded:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
-  - Class: rviz/Time
+  - Class: rviz_common/Time
+    Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: IMG_FLS
-Preferences:
-  PromptSaveOnExit: true
-Toolbars:
-  toolButtonStyle: 2
+    SyncSource: PointCloud2
 Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
       Cell Size: 1
-      Class: rviz/Grid
-      Color: 136; 138; 133
-      Enabled: false
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
-      Name: Grid_H
+      Name: Grid
       Normal Cell Count: 0
       Offset:
         X: 0
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 1000
-      Reference Frame: <Fixed Frame>
-      Value: false
-    - Alpha: 1
-      Cell Size: 1
-      Class: rviz/Grid
-      Color: 245; 121; 0
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Billboards
-      Name: Grid_V
-      Normal Cell Count: 0
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Plane: XZ
       Plane Cell Count: 10
-      Reference Frame: alpha_img/world
-      Value: true
-    - Alpha: 1
-      Cell Size: 10
-      Class: rviz/Grid
-      Color: 0; 128; 0
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid_1
-      Normal Cell Count: 0
-      Offset:
-        X: 10
-        Y: 10
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 2
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 1
-      Cell Size: 10
-      Class: rviz/Grid
-      Color: 32; 74; 135
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid_2
-      Normal Cell Count: 0
-      Offset:
-        X: 10
-        Y: -10
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 2
-      Reference Frame: <Fixed Frame>
-      Value: true
-    - Alpha: 1
-      Cell Size: 10
-      Class: rviz/Grid
-      Color: 164; 0; 0
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid_3
-      Normal Cell Count: 0
-      Offset:
-        X: -10
-        Y: -10
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 2
-      Reference Frame: <Fixed Frame>
-      Value: true
-    - Alpha: 1
-      Cell Size: 10
-      Class: rviz/Grid
-      Color: 193; 125; 17
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid_4
-      Normal Cell Count: 0
-      Offset:
-        X: -10
-        Y: 10
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 2
-      Reference Frame: <Fixed Frame>
-      Value: true
-    - Alpha: 0.10000000149011612
-      Class: rviz/RobotModel
-      Collision Enabled: false
-      Enabled: true
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        cg_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        dvl:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        dvl_sf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        gps:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        heave_bow_thruster_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        heave_stern_thruster_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        imu:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        imu_sf:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        nose_tip_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        oculus:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        ping360_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        pressure:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        surge_thruster_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        sway_stern_thruster_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-      Name: RobotModel
-      Robot Description: alpha_img/robot_description
-      TF Prefix: alpha_img
-      Update Interval: 0
-      Value: true
-      Visual Enabled: true
-    - Class: rviz/TF
+    - Class: rviz_default_plugins/TF
       Enabled: true
       Filter (blacklist): ""
       Filter (whitelist): ""
@@ -238,6 +67,10 @@ Visualization Manager:
           Value: false
         alpha_img/dvl_sf:
           Value: false
+        alpha_img/fls_link:
+          Value: false
+        alpha_img/fls_link_sf:
+          Value: false
         alpha_img/gps:
           Value: false
         alpha_img/heave_bow_thruster_link:
@@ -250,24 +83,23 @@ Visualization Manager:
           Value: false
         alpha_img/nose_tip_link:
           Value: false
-        alpha_img/oculus:
-          Value: false
         alpha_img/odom:
-          Value: false
+          Value: true
         alpha_img/ping360_link:
+          Value: false
+        alpha_img/ping360_link_sf:
           Value: false
         alpha_img/pressure:
           Value: false
         alpha_img/surge_thruster_link:
           Value: false
-        alpha_img/sway_stern_thruster_link:
+        alpha_img/sway_bow_thruster_link:
           Value: false
         alpha_img/world:
           Value: false
         alpha_img/world_ned:
           Value: false
-      Marker Alpha: 1
-      Marker Scale: 0.5
+      Marker Scale: 30
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -277,170 +109,223 @@ Visualization Manager:
           alpha_img/base_link:
             alpha_img/cg_link:
               {}
-            alpha_img/nose_tip_link:
-              alpha_img/dvl:
-                {}
-              alpha_img/dvl_sf:
-                {}
-              alpha_img/gps:
-                {}
-              alpha_img/heave_bow_thruster_link:
-                {}
-              alpha_img/heave_stern_thruster_link:
-                {}
-              alpha_img/imu:
-                {}
+            alpha_img/dvl:
+              {}
+            alpha_img/dvl_sf:
+              {}
+            alpha_img/fls_link:
+              {}
+            alpha_img/fls_link_sf:
+              {}
+            alpha_img/gps:
+              {}
+            alpha_img/heave_bow_thruster_link:
+              {}
+            alpha_img/heave_stern_thruster_link:
+              {}
+            alpha_img/imu:
               alpha_img/imu_sf:
                 {}
-              alpha_img/oculus:
-                {}
-              alpha_img/ping360_link:
-                {}
-              alpha_img/pressure:
-                {}
-              alpha_img/surge_thruster_link:
-                {}
-              alpha_img/sway_stern_thruster_link:
-                {}
-          alpha_img/world:
-            alpha_img/world_ned:
+            alpha_img/nose_tip_link:
               {}
+            alpha_img/ping360_link:
+              {}
+            alpha_img/ping360_link_sf:
+              {}
+            alpha_img/pressure:
+              {}
+            alpha_img/surge_thruster_link:
+              {}
+            alpha_img/sway_bow_thruster_link:
+              {}
+        alpha_img/world:
+          alpha_img/world_ned:
+            {}
       Update Interval: 0
       Value: true
-    - Class: rviz/Marker
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 30
       Enabled: true
-      Marker Topic: /alpha_img/helm/path_3d/path
-      Name: Planed_Path
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: -999999
+      Min Color: 0; 0; 0
+      Min Intensity: 999999
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /alpha_img/stonefish/msis/data/pointcloud/filtered
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.699999988079071
+      Binary representation: false
+      Binary threshold: 100
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 53; 132; 228
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /alpha_img/path
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
       Namespaces:
-        {}
-      Queue Size: 100
+        "": true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /alpha_img/bhv_path_following/path
       Value: true
-    - Class: rviz/Marker
+    - Class: rviz_default_plugins/Marker
       Enabled: true
-      Marker Topic: /alpha_img/helm/path_3d/segment
-      Name: Followed_Path
+      Name: Marker
       Namespaces:
-        {}
-      Queue Size: 100
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
-      Class: rviz/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 255; 255; 127
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 204; 51; 204
-          Scale: 1
-          Value: true
-        Value: false
-      Enabled: true
-      Keep: 1000
-      Name: Odometry
-      Position Tolerance: 0.10000000149011612
-      Queue Size: 10
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 255; 25; 0
-        Head Length: 0.20000000298023224
-        Head Radius: 0.05000000074505806
-        Shaft Length: 0.800000011920929
-        Shaft Radius: 0.029999999329447746
-        Value: Arrow
-      Topic: /alpha_img/odometry/filtered/local
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /alpha_img/FLS/data/display
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: IMG_FLS
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
-      Value: true
-    - Class: rviz/Image
-      Enabled: true
-      Image Topic: /alpha_img/msis/stonefish/data/display
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: IMG_MSIS
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: raw
-      Unreliable: false
+        "": true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /alpha_img/bhv_path_following/segment
       Value: true
   Enabled: true
   Global Options:
-    Background Color: 238; 238; 236
-    Default Light: true
-    Fixed Frame: alpha_img/world
+    Background Color: 48; 48; 48
+    Fixed Frame: alpha_img/odom
     Frame Rate: 30
   Name: root
   Tools:
-    - Class: rviz/Interact
+    - Class: rviz_default_plugins/Interact
       Hide Inactive Objects: true
-    - Class: rviz/MoveCamera
-    - Class: rviz/Select
-    - Class: rviz/FocusCamera
-    - Class: rviz/Measure
-    - Class: rviz/SetInitialPose
-      Theta std deviation: 0.2617993950843811
-      Topic: /initialpose
-      X std deviation: 0.5
-      Y std deviation: 0.5
-    - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
-    - Class: rviz/PublishPoint
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
       Single click: true
-      Topic: /clicked_point
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
   Value: true
   Views:
     Current:
-      Class: rviz/Orbit
-      Distance: 62.98691177368164
+      Class: rviz_default_plugins/Orbit
+      Distance: 171.03968811035156
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Field of View: 0.7853981852531433
       Focal Point:
-        X: -6.8657917976379395
-        Y: -5.3250837326049805
-        Z: -2.819772481918335
-      Focal Shape Fixed Size: false
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.45479652285575867
-      Target Frame: alpha/base_link
-      Yaw: 1.5354335308074951
+      Pitch: 1.5697963237762451
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 4.700395107269287
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1016
+  Height: 846
   Hide Left Dock: false
-  Hide Right Dock: true
-  IMG_FLS:
-    collapsed: false
-  IMG_MSIS:
-    collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000020a000003c5fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc000000160000022b000000e60100001cfa000000000100000002fb0000000e0049004d0047005f0046004c00530100000000ffffffff0000006f00fffffffb000000100044006900730070006c00610079007301000000000000020a0000015600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000100049004d0047005f004d0053004900530100000247000001940000001600ffffff0000000100000100000003e0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000016000003e0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f30000003efc0100000002fb0000000800540069006d00650000000000000004f30000041800fffffffb0000000800540069006d0065010000000000000450000000000000000000000570000003c500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000040000000000000156000002acfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f000002ac000000cc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002acfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003f000002ac000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004b00000003efc0100000002fb0000000800540069006d00650100000000000004b00000026f00fffffffb0000000800540069006d006501000000000000045000000000000000000000023f000002ac00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -448,7 +333,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: true
-  Width: 1920
-  X: 0
-  Y: 27
+    collapsed: false
+  Width: 1200
+  X: 385
+  Y: 1217

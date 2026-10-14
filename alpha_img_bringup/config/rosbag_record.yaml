@@ -1,0 +1,12 @@
+workspace_name: "ros2_ws"
+
+# Packages whose *config/*.yaml files that needs to be saved
+package_names:
+  - "alpha_img_bringup"
+  - "alpha_img_config"
+
+# Packages whose .urdf files need to be copied into the bag session folder
+urdf_package_names:
+  - "alpha_img_description"
+
+bag_output_dir: "~/bags"

@@ -1,0 +1,24 @@
+/alpha_img/bluerobotics_pressure_node:
+    ros__parameters:
+        ros:
+            frame_id: 'alpha_img/pressure'
+
+        sensor:
+            # brief: MODEL_02BA = 0, MODEL_30BA = 1
+            model: 1
+
+            # brief: Default I2C bus is 1
+            bus: 1
+
+            # brief: Fluid Density (kg/m^3); fresh: 997.0474; seawater: 1023.6
+            fluid_density: 997.0474
+
+            child_frame: 'alpha_img/pressure'
+
+            parent_frame: 'alpha_img/world'
+
+            z_covariance: 0.11
+
+        system:
+            # brief: sensor publish rate
+            rate: 10

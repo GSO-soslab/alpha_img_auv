@@ -1,28 +1,27 @@
 # ALPHA IMG AUV
 
 ## Introduction
-This is the configuration for our ALPHA IMG AUV.
-- ROS version Noetic,
-- Ubuntu 20.04
-
+This is the configuration for our ALPHA IMG AUV, the imaging-sonar vehicle of the ALPHA family. It carries the Blueprint Oculus forward-looking sonar, the Blue Robotics Ping360 mechanically scanned sonar, a fisheye camera and, in the near future, a Cerulean Omniscan 3D. For the ROS 1 (Noetic) configuration, see the `noetic_devel` branch.
+- ROS2 version Jazzy,
+- Ubuntu 24.04
 
 ## Directory structure
-- `alpha_img_auv`: Meta package for the standard ALPHA AUV.
+- `alpha_img_auv`: Meta package for the ALPHA IMG AUV.
 
-- `alpha_img_bringup`: Launch files to bring the vehicle/simulation up runnning
+- `alpha_img_bringup`: Launch files and sensor/localization configurations to bring the vehicle/simulation up running
 
-- `alpha_img_config`: Configuration files for helm, controller, and devices. `mvp_mission` state machine is configured in `/mission/config/helm.yaml`. Parameters for different behaviors program for the helm is located in `/mission/param`. `mvp_control` configuration is under `/config/control.yaml`.
+- `alpha_img_config`: Configuration files for the MVP helm (`mvp_mission_config`) and controller (`mvp_control_config`).
 
 - `alpha_img_description`: URDF files, rviz configuration, and vehicle mesh
 
 ## Installation
 
 ### Install the Stonefish simulator
-- We use [Stonefish](https://stonefish.readthedocs.io/en/latest/install.html) Simulator. You can clone it from [here](https://github.com/uri-ocean-robotics/stonefish), a fork from the [original_repo](https://github.com/patrykcieslak/stonefish).
+- We use [Stonefish](https://stonefish.readthedocs.io/en/latest/install.html) Simulator. You can clone it from [here](https://github.com/GSO-soslab/stonefish), a fork from the [original_repo](https://github.com/patrykcieslak/stonefish).
 
 - Download the stonefish simulator **to another location outside your ROS workspace**
 ```bash
-git clone https://github.com/uri-ocean-robotics/stonefish
+git clone https://github.com/GSO-soslab/stonefish
 ```
 
 - Install dependencies using `sudo apt install` (instruction from the [Stonefish](https://github.com/patrykcieslak/stonefish))
@@ -45,103 +44,93 @@ git clone https://github.com/uri-ocean-robotics/stonefish
     sudo make install
     ```
 
+
 ### Setup ALPHA IMG Repo
 - Clone `alpha_img_auv` repo
     ```bash
     git clone https://github.com/GSO-soslab/alpha_img_auv
+    cd alpha_img_auv
+    git checkout jazzy-devel
     ```
-- You can run the similar commands for other AUVs.
+- 
+
 - Install pip and setup python3 as default
     ```bash
     sudo apt install python3-pip
-    ```    
+    ```
 
 ### Install ROS-MVP 
 Currently MVP packages should be build from the source.
-Target platform must be Ubuntu 20.04 because of the dependencies.
+Target platform must be Ubuntu 24.04 because of the dependencies.
 
 Pull repository and other dependencies
 ```bash
-git clone --single-branch --branch noetic-devel https://github.com/uri-ocean-robotics/mvp_msgs
-git clone --single-branch --branch noetic-devel https://github.com/uri-ocean-robotics/mvp_control
-git clone --single-branch --branch noetic-devel https://github.com/uri-ocean-robotics/mvp_mission
-git clone --single-branch --branch noetic-devel https://github.com/GSO-soslab/mvp_utilities.git
-git clone --single-branch --branch noetic-devel https://github.com/uri-ocean-robotics/stonefish_mvp
-git clone --single-branch --branch main https://github.com/GSO-soslab/world_of_stonefish.git
-```    
+git clone --single-branch --branch jazzy-devel https://github.com/uri-ocean-robotics/mvp_msgs
+git clone --single-branch --branch jazzy-devel https://github.com/GSO-soslab/stonefish_ros2.git
+git clone --single-branch --branch jazzy-devel https://github.com/uri-ocean-robotics/mvp_control
+git clone --single-branch --branch jazzy-devel https://github.com/uri-ocean-robotics/mvp_mission
+git clone --single-branch --branch jazzy-devel https://github.com/uri-ocean-robotics/mvp_utilities.git
+git clone --single-branch --branch jazzy-devel https://github.com/GSO-soslab/world_of_stonefish
+```
 
-**stonefish_mvp** is a wrapper modified from [stonefish_ros](https://github.com/patrykcieslak/stonefish_ros) for ROS interface with ROS-MVP.
+**stonefish_ros2** is the ROS2 interface for Stonefish simulator.
 
 ### Hardware drivers (Not needed for simulation)
-- Clone [mvp_core] repo which include other hardware related source code, sensor drivers, and other utilities.
+- Clone **mvp_hardware_drivers** repo which include other hardware related source code, sensor drivers, and other utilities.
 
     ```bash
-    git clone --single-branch --branch noetic-devel https://github.com/GSO-soslab/mvp_core.git
+    git clone --single-branch --branch jazzy-devel https://github.com/uri-ocean-robotics/mvp_hardware_drivers.git
     ```
 
-- Install Dependencies
-
-Install all submodules for `mvp_core`
-```sh
-cd mvp_core
+- Install dependencies for **mvp_hardware_drivers**
+```
+cd mvp_hardware_drivers
 git submodule update --init --recursive
 ```
 
 - Install a specific submodule 
-```sh
-cd mvp_core
+```
 git submodule update <specific path to submodule>
 ```
 
-- Install required submodules of Pi for ALPHA IMG AUV
-```sh
-cd mvp_core/external
-git submodule update --init --recursive ROS_MSCL power_monitor waterlinked_dvl bluerobotics_pressure uno_lqe xsens_mti_ros_driver
-```
-- Install required submodules of Jetson for ALPHA IMG AUV
-```sh
-cd mvp_core/external
-git submodule update --init --recursive bluerobotics_ping360 blueprint_oculus_sonar
-```
-
-Install dependencies for required ROS packages
-```bash
-cd /Your_WorkSpace/
-rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y
-```
 
 ### Compile the code
-go back to the ROS Workspace dir (e.g., catkin_ws), then do
+go back to the ROS Workspace dir (e.g., ros2_ws), then do
 ```bash
-catkin_make
+colcon build
 ```
 
-
 ## Quick test
-- Bring up the ALPHA Standard AUV with the Stonefish simualtor.
+- Bring up the ALPHA IMG AUV with the Stonefish simulator. This needs the `ocean_img.scn` world and `alpha_img.scn` vehicle in `world_of_stonefish` (see Known gaps).
 
 ```bash
-roslaunch alpha_img_bringup bringup_simulation.launch
+ros2 launch alpha_img_bringup bringup_simulation.launch.py
 ```
 
 - Enable the controller in a separated terminal
 ```bash
-rosservice call /alpha_img_auv/controller/enable
+ros2 service call /alpha_img/controller/set std_srvs/srv/SetBool data:\ true\ 
 ```
 
-- Start a path following mission in local frame where your waypoint is defined in `alpha_img_config/mission/param/path_local.yaml`
+- Start a path following mission in local frame where your waypoint is defined in L78-81 under bhv_path_following in  `alpha_img_auv/alpha_img_bringup/config/bhv_params_sim.yaml` 
 
 ```bash
-rosservice call /alpha_img_auv/helm/change_state "state: 'survey_3d'"
+ros2 service call /alpha_img/mvp_helm/change_state mvp_msgs/srv/ChangeState "{state: 'survey', caller: 'user'}"
 ```
 
 - You can put AUV in idle anytime by changing the state of the helm
 
 ```bash
-rosservice call /alpha_img_auv/helm/change_state "state: 'start'"
+ros2 service call /alpha_img/mvp_helm/change_state mvp_msgs/srv/ChangeState "{state: 'start', caller: 'user'}"
 ```
 
-- Note: Make sure you selected the correct topics for the Markers in the RViz window.
+- Note: Make sure you selected the correct topics for the Markers in the RViz window. `/alpha_img/bhv_path_following/path` & `/alpha_img/bhv_path_following/segment`
+
+
+## Known gaps
+- `world_of_stonefish` (`jazzy-devel`) has no `alpha_img` vehicle or `ocean_img` world yet, so the simulation launch will not start until they are added there.
+- The MVP control gains in `alpha_img_config/mvp_control_config` are Rise starting values, not tuned for IMG. Only the thruster layout, limits and polynomials are carried over from the ROS 1 setup.
+- The Waterlinked DVL topic (`dvl/raw_twist`) and the Microstrain/Madgwick chain have not been checked against the ROS 2 drivers on the vehicle.
 
 
 ## Citation
@@ -165,12 +154,13 @@ The MVP paper:
 @inproceedings{
     ALPHA_PAPER,
     title = {Working toward the development of a generic marine vehicle framework: ROS-MVP},
-    author={Gezer, Emir Cem and Zhou, Mingxi and Zhao, Lin and McConnell, William},
+    author={Gezer, Emir Cem and Zhou, Mingxi and Zhao, LIN and McConnell, William},
     booktitle={OCEANS 2022: Hampton Roads},
     year={2022},
     organization={IEEE}
 }
 ```
+
 
 
 ## Funding
