@@ -85,6 +85,25 @@
         <child link="oculus"/>
     </joint>
 
+    <!-- ===== BEGIN Cerulean Omniscan 450 FS, port unit (comment out if not installed) =====
+         TODO: mounting position and orientation are placeholders (forward-looking here),
+         take them from the CAD / vehicle. A second unit on the other side is planned,
+         copy this block as fs450_stbd. -->
+    <link name="fs450_port_link"/>
+    <joint name="fs450_port_joint" type="fixed">
+        <origin xyz="-0.05 0.0 -0.12" rpy="0.0 0.0 0.0"/>
+        <parent link="nose_tip_link"/>
+        <child link="fs450_port_link"/>
+    </joint>
+    <!-- ===== END Cerulean Omniscan 450 FS, port unit ===== -->
+
+    <!-- <link name="fs450_stbd_link"/>
+    <joint name="fs450_stbd_joint" type="fixed">
+        <origin xyz="-0.05 0.0 -0.12" rpy="0.0 0.0 0.0"/>
+        <parent link="nose_tip_link"/>
+        <child link="fs450_stbd_link"/>
+    </joint> -->
+
     <!-- thrusters -->
     <link name="surge_thruster_link"/>
     <joint name="surge_thruster_joint" type="fixed">
