@@ -67,9 +67,9 @@ Visualization Manager:
           Value: false
         alpha_img/dvl_sf:
           Value: false
-        alpha_img/fls_link:
+        alpha_img/oculus:
           Value: false
-        alpha_img/fls_link_sf:
+        alpha_img/oculus_sf:
           Value: false
         alpha_img/gps:
           Value: false
@@ -113,9 +113,9 @@ Visualization Manager:
               {}
             alpha_img/dvl_sf:
               {}
-            alpha_img/fls_link:
+            alpha_img/oculus:
               {}
-            alpha_img/fls_link_sf:
+            alpha_img/oculus_sf:
               {}
             alpha_img/gps:
               {}

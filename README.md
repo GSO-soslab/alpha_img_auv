@@ -127,6 +127,14 @@ ros2 service call /alpha_img/mvp_helm/change_state mvp_msgs/srv/ChangeState "{st
 - Note: Make sure you selected the correct topics for the Markers in the RViz window. `/alpha_img/bhv_path_following/path` & `/alpha_img/bhv_path_following/segment`
 
 
+## Payload bringup (hardware)
+The imaging payload runs on the Jetson, the navigation sensors on the Pi.
+
+```bash
+ros2 launch alpha_img_bringup bringup_sonars.launch.py   # Ping360 MSIS + Oculus FLS
+ros2 launch alpha_img_bringup bringup_camera.launch.py   # DWE fisheye camera (usb_cam)
+```
+
 ## Known gaps
 - `world_of_stonefish` (`jazzy-devel`) has no `alpha_img` vehicle or `ocean_img` world yet, so the simulation launch will not start until they are added there.
 - The MVP control gains in `alpha_img_config/mvp_control_config` are Rise starting values, not tuned for IMG. Only the thruster layout, limits and polynomials are carried over from the ROS 1 setup.

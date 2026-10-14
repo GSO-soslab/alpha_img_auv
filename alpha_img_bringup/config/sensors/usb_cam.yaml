@@ -1,0 +1,11 @@
+/alpha_img/usb_cam:
+  ros__parameters:
+    video_device: "/dev/video0"
+    image_width: 1280
+    image_height: 720
+    pixel_format: "yuyv"
+    # Low framerate (5 Hz) works with yuyv. mjpeg gives 15 Hz but had a
+    # colorspace issue on the ROS 1 setup.
+    framerate: 5.0
+    io_method: "mmap"
+    camera_frame_id: "alpha_img/usb_cam"
