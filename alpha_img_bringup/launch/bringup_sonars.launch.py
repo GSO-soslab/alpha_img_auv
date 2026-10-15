@@ -24,6 +24,9 @@ def generate_launch_description():
     arg_mbes = DeclareLaunchArgument('mbes', default_value='false',
                                      description='Start the Cerulean multibeam sonar')
 
+    arg_fs450 = DeclareLaunchArgument('fs450', default_value='false',
+                                      description='Launch the Cerulean Omniscan 450 FS driver')
+
     # rmw_zenoh router for multi-machine communication
     zenoh = ExecuteProcess(
         cmd=['ros2', 'run', 'rmw_zenoh_cpp', 'rmw_zenohd'],
@@ -40,11 +43,16 @@ def generate_launch_description():
     # Cerulean multibeam sonar
     mbes = include('cerulean_sonar_mbes.launch.py', IfCondition(LaunchConfiguration('mbes')))
 
+    # Cerulean Omniscan 450 FS (off by default until its Jazzy driver is available)
+    fs450 = include('cerulean_fs450.launch.py', IfCondition(LaunchConfiguration('fs450')))
+
     return LaunchDescription([
         arg_zenoh,
         arg_mbes,
+        arg_fs450,
         zenoh,
         msis,
         fls,
         mbes,
+        fs450,
     ])
