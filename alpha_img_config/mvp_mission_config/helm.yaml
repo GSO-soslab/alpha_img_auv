@@ -16,7 +16,7 @@ finite_state_machine:
   teleop:
     control_mode: teleop
     transitions: [start, kill] 
-    max_duration: 4000
+    max_duration: 3000
     exit_state: kill
     
   survey:
@@ -42,3 +42,13 @@ behaviors:
     plugin: helm/PathFollowing
     priority:
       survey: 1
+
+  bhv_surfacing:
+    plugin: helm/Surfacing
+    priority:
+      survey: 3
+
+  bhv_altitude_tracking:
+    plugin: helm/AltitudeTracking
+    priority:
+      survey: 2
