@@ -1,0 +1,14 @@
+/alpha_img/madgwick_filter_node:
+  ros__parameters:
+    world_frame: enu
+    gain: 0.4
+    use_mag: true
+    publish_tf: false
+    # Magnetometer hard-iron calibration (see microstrain_calibration.md)
+    mag_bias_x: 0.0194
+    mag_bias_y: -0.0547
+    mag_bias_z: -0.0847
+    # Gyro/accel biases from the ROS 1 launch file. imu_filter_madgwick has no
+    # such parameters; apply them in the IMU driver if they are still needed.
+    #   gyro_bias:  [-0.002047483082430453, -0.0011376166483670807, 5.829118179724444e-05]
+    #   accel_bias: [0.0001292, 0.000424247, -0.00362847]

@@ -1,0 +1,5 @@
+/alpha_img/nmea_serial_driver:
+  ros__parameters:
+    port: /dev/ttyUSB0
+    baud: 9600
+    frame_id: alpha_img/gps

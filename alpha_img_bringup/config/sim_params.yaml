@@ -1,0 +1,23 @@
+/alpha_img/imu_driver_node:
+    ros__parameters:
+      roll_offset: 3.1415926
+      pitch_offset: 0.0
+      yaw_offset: 1.5707
+      roll_reverse: 1.0
+      pitch_reverse: -1.0
+      yaw_reverse: -1.0
+
+/alpha_img/thruster_driver_node:
+    ros__parameters:
+      thruster_pub_topic: /alpha_img/stonefish/thruster_command
+      thruster_length: 4
+      thruster_sub_topics: [/alpha_img/control/thruster/surge, 
+                          /alpha_img/control/thruster/sway_stern, 
+                          /alpha_img/control/thruster/heave_stern, 
+                          /alpha_img/control/thruster/heave_bow]
+
+/alpha_img/dvl_driver_node:
+    ros__parameters:
+      dvl_in: /alpha_img/dvl/stonefish/raw
+      dvl_out: /alpha_img/dvl/twist
+      dvl_alt_out: /alpha_img/dvl/altitude

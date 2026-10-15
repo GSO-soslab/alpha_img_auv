@@ -5,21 +5,20 @@
   <description>The alpha_img_description package</description>
 
   <maintainer email="linzhao@uri.edu">Lin Zhao</maintainer>
-  <author email="emircem@uri.edu">Emir Cem Gezer</author>
   <author email="mzhou@uri.edu">Mingxi Zhou</author>
+  <author email="emircem@uri.edu">Emir Cem Gezer</author>
   <author email="linzhao@uri.edu">Lin Zhao</author>
 
   <license>GPLv3</license>
-
-  <buildtool_depend>catkin</buildtool_depend>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rviz2</depend>
   <depend>tf2_ros</depend>
-  <depend>xacro</depend>
-  <depend>robot_state_publisher</depend>
-  <depend>joint_state_publisher</depend>
-
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
 
   <export>
-
+    <build_type>ament_cmake</build_type>
   </export>
-
 </package>

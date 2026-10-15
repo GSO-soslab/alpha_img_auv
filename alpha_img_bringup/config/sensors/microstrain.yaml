@@ -1,0 +1,29 @@
+/alpha_img/microstrain_inertial_driver:
+  ros__parameters:
+    port : '/dev/ttyACM0'
+    baudrate : 115200
+    set_baud : False
+    poll_port : False
+    poll_rate_hz : 1.0
+    poll_max_tries : 60
+    reconnect_attempts : 0
+    configure_after_reconnect : True
+    device_setup : True
+    save_settings : False
+    raw_file_enable : False
+    raw_file_include_support_data : True
+    raw_file_directory : "/home/your_name"
+    use_enu_frame : True
+    frame_id : 'alpha_img/imu'
+    tf_mode : 0
+    publish_mount_to_frame_id_transform : False
+    imu_orientation_cov : [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+    imu_linear_cov : [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+    imu_angular_cov : [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+    imu_mag_cov : [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
+    imu_pressure_variance : 0.01
+    imu_data_raw_rate : 100  # imu/data_raw feeds the Madgwick filter
+    imu_data_rate : 0
+    imu_mag_data_rate : 100
+    imu_pressure_data_rate : 0
+    imu_wheel_speed_data_rate : 0
