@@ -1,0 +1,12 @@
+/alpha_img/fls_pcl_node:
+  ros__parameters:
+    horizontal_beamwidth: 70 #degrees
+    max_range: 40 #m
+    max_depth: -1.0 #World Frame (ENU)
+    intensity_threshold: 30
+    range_threshold: 10 #m
+    frame_id: 'alpha_img/oculus'
+    sub_topic: '/alpha_img/oculus/raw_image'
+    
+    # process every (int) beam into pointcloud. (1 - 512)
+    beam_skip_count: 1

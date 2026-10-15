@@ -22,6 +22,19 @@
   <exec_depend>imu_filter_madgwick</exec_depend>
   <exec_depend>nmea_navsat_driver</exec_depend>
   <exec_depend>joy</exec_depend>
+  <exec_depend>unicore_rtk_driver</exec_depend>
+  <exec_depend>gpsd_client</exec_depend>
+  <exec_depend>gps_tools</exec_depend>
+  <exec_depend>nucleus_driver_ros2</exec_depend>
+  <exec_depend>cerulean_surveyor_driver</exec_depend>
+  <exec_depend>mvp_acomm_utilities</exec_depend>
+  <exec_depend>evologics_ros</exec_depend>
+  <exec_depend>mvp_c2</exec_depend>
+  <exec_depend>mvp_gui_2</exec_depend>
+  <exec_depend>pcl_proc</exec_depend>
+  <exec_depend>nav2_costmap_2d</exec_depend>
+  <exec_depend>rmw_zenoh_cpp</exec_depend>
+  <exec_depend>foxglove_bridge</exec_depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
