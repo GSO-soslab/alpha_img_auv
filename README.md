@@ -135,12 +135,6 @@ ros2 launch alpha_img_bringup bringup_sonars.launch.py   # Ping360 MSIS + Oculus
 ros2 launch alpha_img_bringup bringup_camera.launch.py   # DWE fisheye camera (usb_cam)
 ```
 
-## Known gaps
-- `world_of_stonefish` (`jazzy-devel`) has no `alpha_img` vehicle or `ocean_img` world yet, so the simulation launch will not start until they are added there.
-- The MVP control gains in `alpha_img_config/mvp_control_config` are Rise starting values, not tuned for IMG. Only the thruster layout, limits and polynomials are carried over from the ROS 1 setup.
-- The Waterlinked DVL topic (`dvl/raw_twist`) and the Microstrain/Madgwick chain have not been checked against the ROS 2 drivers on the vehicle.
-
-
 ## Citation
 
 The ALPHA paper:
